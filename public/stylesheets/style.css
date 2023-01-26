@@ -1,0 +1,130 @@
+.slideLeft{
+  animation-name: slideLeft;
+  -webkit-animation-name: slideLeft;
+
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+
+  visibility: visible !important;
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(150%);
+  }
+  50%{
+    transform: translateX(-8%);
+  }
+  65%{
+    transform: translateX(4%);
+  }
+  80%{
+    transform: translateX(-4%);
+  }
+  95%{
+    transform: translateX(2%);
+  }
+  97%{
+    transform: translateX(-1%);
+  }
+  99%{
+    transform: translateX(1%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes slideLeft {
+  0% {
+    -webkit-transform: translateX(150%);
+  }
+  50%{
+    -webkit-transform: translateX(-8%);
+  }
+  60%{
+    -webkit-transform: translateX(4%);
+  }
+  70%{
+    -webkit-transform: translateX(-4%);
+  }
+  80%{
+    -webkit-transform: translateX(2%);
+  }
+  90%{
+    -webkit-transform: translateX(-1%);
+  }
+  95%{
+    -webkit-transform: translateX(1%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+  }
+}
+
+* {
+  margin: 0;
+}
+
+#mind-map {
+  width: calc(70% - 40px);
+  height: calc(100% - 40px);
+  /*position:absolute;*/
+  margin: 20px;
+}
+
+#glossary {
+  width: 30%;
+  height: calc(100% - 40px);
+  border-radius: 1px;
+  overflow: auto;
+  /*position:absolute;*/
+  margin: 20px;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.term {
+  border: 4px solid #232323;
+  background: rgb(49,49,49);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  padding: 30px;
+  /*border-radius: 20px;*/
+  color: white;
+  font-family: Seravek;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.term > .title {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.term:first-child {
+  margin-top: 5px;
+}
+
+.term:last-child {
+  margin-bottom: 5px;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  width: 100%;
+  height: 100%;
+  background-image: url("/images/image.jpg");
+  background-size: cover;
+}
